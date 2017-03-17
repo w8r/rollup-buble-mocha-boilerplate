@@ -16,8 +16,6 @@
     "prepublish": "npm run build && npm test"
   },
   "devDependencies": {
-    "babel-preset-es2015-rollup": "^3.0.0",
-    "chai": "^3.5.0",
     "eslint": "^3.17.1",
     "eslint-config-airbnb-base": "^11.1.1",
     "eslint-plugin-import": "^2.2.0",

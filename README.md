@@ -7,7 +7,7 @@ tests in ES6 and only bundle them invisibly. Also no build systems but npm scrip
 
 ```
 git clone https://github.com/w8r/rollup-buble-mocha-boilerplate.git your-project
-cd jour-project
+cd your-project
 rm -rf .git
 git init
 ```

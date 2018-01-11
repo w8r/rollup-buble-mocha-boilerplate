@@ -1,7 +1,7 @@
 import config from './rollup.config';
 
-config.format     = 'umd';
-config.dest       = 'dist/lib.umd.js';
-config.moduleName = 'lib';
+config.output.format = 'umd';
+config.output.file = 'dist/lib.umd.js';
+config.output.name = 'lib';
 
 export default config;

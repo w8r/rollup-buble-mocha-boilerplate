@@ -17,7 +17,7 @@
     return 'I am a dependency';
   }
 
-  function index () { return dependency() + 1; }
+  function index (n) { return ((dependency()) + " + " + n); }
 
   return index;
 

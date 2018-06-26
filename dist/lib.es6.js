@@ -11,7 +11,7 @@ function dependency () {
   return 'I am a dependency';
 }
 
-function index () { return dependency() + 1; }
+var index = (n) => `${dependency()} + ${n}`;
 
 export default index;
 //# sourceMappingURL=lib.es6.js.map

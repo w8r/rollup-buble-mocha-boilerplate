@@ -1,4 +1,4 @@
-# Rollup + Buble + Mocha boilerplate
+# Rollup + Buble + Mocha boilerplate [![npm version](https://badge.fury.io/js/rollup-buble-mocha-boilerplate.svg)](https://badge.fury.io/js/rollup-buble-mocha-boilerplate) [![TravisCI](https://travis-ci.org/w8r/rollup-buble-mocha-boilerplate.svg?branch=master)](https://travis-ci.org/w8r/rollup-buble-mocha-boilerplate)
 
 Couldn't find the right (purist) combination, which would allow comfortably author
 Javascript libraries without the overhead and slowness of Babel, but with

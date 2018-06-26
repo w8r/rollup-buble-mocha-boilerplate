@@ -1,1 +1,3 @@
-export default function () { return 1; }
+import { dependency } from './dependency';
+
+export default (n) => `${dependency()} + ${n}`;

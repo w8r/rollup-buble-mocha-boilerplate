@@ -1,7 +1,47 @@
-import buble from 'rollup-plugin-buble';
+import resolve  from 'rollup-plugin-node-resolve';
+import commonjs from 'rollup-plugin-commonjs';
+import buble    from 'rollup-plugin-buble';
+import pkg from './package.json';
 
-export default {
-  entry:     'src/index.js',
-  sourceMap: true,
-  plugins:   [ buble() ]
-};
+const { version, author, name, main, license, description } = pkg;
+
+const banner = `\
+/**
+ * ${name} v${version}
+ * ${description}
+ *
+ * @author ${author}
+ * @license ${license}
+ * @preserve
+ */
+`;
+
+export default [{
+  input: 'src/index.js',
+  output: {
+    file: main,
+    name: 'lib',
+    sourcemap: true,
+    format: 'umd',
+    banner
+  },
+  plugins: [
+    resolve(),  // so Rollup can find external libs
+    commonjs(), // so Rollup can convert commonJS to an ES module
+    buble()
+  ]
+}, {
+  input: 'src/index.js',
+  output: {
+    file: pkg.module,
+    name: 'lib',
+    sourcemap: true,
+    format: 'esm',
+    banner
+  },
+  plugins: [
+    resolve(),  // so Rollup can find external libs
+    commonjs(), // so Rollup can convert commonJS to an ES module
+    buble()
+  ]
+}];
